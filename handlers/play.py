@@ -153,7 +153,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                         text="𝘾𝙝𝙖𝙣𝙣𝙚𝙡 🔊",
-                        url="https://t.me/Sanki_BOTs")
+                        url="https://t.me/BONDOFBESTIZZ")
                    
                 ]
             ]
@@ -187,33 +187,32 @@ async def play(_, message: Message):
                 secmul *= 60
                 
             keyboard = InlineKeyboardMarkup(
+                            [
                 [
-                    [
-                        InlineKeyboardButton(
-                            text="𝙔𝙤𝙪𝙩𝙪𝙗𝙚 🎬",
-                            url=f"{url}"),
-                        InlineKeyboardButton(
-                            text="𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 📥",
-                            url=f"{durl}")
-
-                    ]
-                ]
-            )
+                    InlineKeyboardButton(
+                        "GROUP🇮🇳", url="https://t.me/ELECTROBOT_SUPPORT")
+                  ],[ 
+                    InlineKeyboardButton(
+                        "CHANNEL", url="https://t.me/ELECTRO_UPDATES"
+                    )]
+            ]
+        )
         except Exception as e:
             title = "NaN"
             thumb_name = "https://telegra.ph/file/51a70e2ef9e0bde60b0d2.jpg"
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                text="𝙔𝙤𝙪𝙩𝙪𝙗𝙚 🎬",
-                                url=f"https://youtube.com")
-
-                        ]
-                    ]
-                )
+                            [
+                [
+                    InlineKeyboardButton(
+                        "GROUP🇮🇳", url="https://t.me/ELECTROBOT_SUPPORT")
+                  ],[ 
+                    InlineKeyboardButton(
+                        "CHANNEL", url="https://t.me/ELECTRO_UPDATES"
+                    )]
+            ]
+        )
         if (dur / 60) > DURATION_LIMIT:
              await lel.edit(f"𝙑𝙞𝙙𝙚𝙤 𝙄𝙨 𝙇𝙤𝙣𝙜𝙚𝙧 𝙏𝙝𝙖𝙣 {DURATION_LIMIT} 𝙈𝙞𝙣𝙪𝙩𝙚𝙨.")
              return
@@ -255,18 +254,16 @@ async def play(_, message: Message):
             return
 
         keyboard = InlineKeyboardMarkup(
+                                 [
                 [
-                    [
-                        InlineKeyboardButton(
-                            text="𝙔𝙤𝙪𝙩𝙪𝙗𝙚 🎬",
-                            url=f"{url}"),
-                        InlineKeyboardButton(
-                            text="𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 📥",
-                            url=f"{durl}")
-
-                    ]
-                ]
-            )
+                    InlineKeyboardButton(
+                        "GROUP🇮🇳", url="https://t.me/ELECTROBOT_SUPPORT")
+                  ],[ 
+                    InlineKeyboardButton(
+                        "CHANNEL🇮🇳", url="https://t.me/ELECTRO_UPDATES"
+                    )]
+            ]
+        )
         
         if (dur / 60) > DURATION_LIMIT:
              await lel.edit(f"𝙑𝙞𝙙𝙚𝙤 𝙄𝙨 𝙇𝙤𝙣𝙜𝙚𝙧 𝙏𝙝𝙖𝙣 {DURATION_LIMIT} 𝙈𝙞𝙣𝙪𝙩𝙚𝙨.")
