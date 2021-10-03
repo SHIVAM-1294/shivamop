@@ -9,7 +9,7 @@ from helpers.filters import other_filters2
 async def start(_, message: Message):
     await message.reply_sticker("CAACAgEAAx0CW1SIGwABBCNbYVhgeh82nsUhS6Ao0rPrp1eKIR8AAiQBAAJd9mBH4_VeoPoUqQ8eBA")
     await message.reply_text(
-        f"""**Hey there! My name is Besties✨,
+        f"""**Hey there! My name is Ηαʀℓεψ✨,
 I can play music in your group🎉 .
 ADD me in your group and play music freely🇮🇳 **
         """,
