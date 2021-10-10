@@ -2,49 +2,29 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 from config import BOT_NAME as bn
-from helpers.filters import other_filters2
+from helpers.filters import command, other_filters2, other_filters
 
 
-@Client.on_message(other_filters2)
-async def start(_, message: Message):
-    await message.reply_sticker("CAACAgEAAx0CW1SIGwABBCNbYVhgeh82nsUhS6Ao0rPrp1eKIR8AAiQBAAJd9mBH4_VeoPoUqQ8eBA")
+
+@Client.on_message(command("vchelp") & other_filters2)
+async def helper(ok, message: Message):
     await message.reply_text(
-        f"""**Hey there! My name is Ηαʀℓεψ✨,
-I can play music in your group🎉 .
-ADD me in your group and play music freely🇮🇳 **
-        """,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "🛠 Bot lists", url="https://t.me/BONDOFBESTIZZ")
-                  ],[
-                    InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/ELECTROBOT_SUPPORT"
-                    ),
-                    InlineKeyboardButton(
-                        "🔊 Channel", url="https://t.me/ELECTRO_UPDATES"
-                    )
-                ],[ 
-                    InlineKeyboardButton(
-                        "➕ Add me to group ➕", url="https://t.me/HarleyMusic_Bot?startgroup=true"
-                    )]
-            ]
-        ),
-     disable_web_page_preview=True
-    )
+        f"""💞 Hello! Following are the commands available for **𝗘𝗟𝗘𝗖𝗧𝗥𝗢** - __A Group Voice Chat Music Player__.
+The commands I currently support are:
 
-@Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
-async def gstart(_, message: Message):
-      await message.reply_text("""**Besties robot is online✅**""",
-      reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "🔊 Channel", url="https://t.me/BONDOFBESTIZZ")
-                ]
-            ]
-        )
-   )
+🔥 **Users Commands :**
+⚜️ /play - **[ Groups Only ]** > __Plays the replied audio file or YouTube video through link.__
+⚜️ /song - **[ Groups & DM ]** > __Uploads the searched song in the chat.__
 
+
+
+🔰 **Admin & Sudo Users Commands :**
+⚜️ /pause - **[Groups Only ]** > __Pause Voice Chat Music.__
+⚜️ /resume - **[Groups Only ]** > __Resume Voice Chat Music.__
+⚜️ /skip - **[Groups Only ]** > __Skips the current Music Playing In Voice Chat.__
+⚜️ /stop - **[Groups Only ]** > __Clears The Queue as well as ends Voice Chat Music.__""")
+
+@Client.on_message(command("vchelp") & other_filters)
+async def ghelp(_, message: Message):
+    await message.reply_text(f"**𝗘𝗟𝗘𝗖𝗧𝗥𝗢 :-** Hey! PM me to get all the commands 😉")
 
